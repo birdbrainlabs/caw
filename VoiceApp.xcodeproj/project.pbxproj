@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+        CC0000000000000000000003 = {isa = PBXBuildFile; fileRef = CC0000000000000000000004; };
+        CC0000000000000000000001 = {isa = PBXBuildFile; fileRef = CC0000000000000000000002; };
+		A10000000000000000000001 /* VoiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* VoiceApp.swift */; };
+		A10000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* AppDelegate.swift */; };
+		A10000000000000000000003 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* AppState.swift */; };
+		A10000000000000000000004 /* FnKeyMonitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* FnKeyMonitoring.swift */; };
+		A10000000000000000000005 /* FnKeyEventTapMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* FnKeyEventTapMonitor.swift */; };
+		A10000000000000000000007 /* TranscriptDisfluencyCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* TranscriptDisfluencyCleaner.swift */; };
+		A10000000000000000000009 /* LiveTranscriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000D /* LiveTranscriptionController.swift */; };
+		A1000000000000000000000A /* FloatingPillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000E /* FloatingPillController.swift */; };
+		A1000000000000000000000B /* TextInsertionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000F /* TextInsertionController.swift */; };
+		A1000000000000000000000C /* MicrophoneCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* MicrophoneCapture.swift */; };
+		A1000000000000000000000D /* InsertionAuditLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* InsertionAuditLog.swift */; };
+		A1000000000000000000000E /* InsertionDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* InsertionDestinations.swift */; };
+		A1000000000000000000000F /* TrainingCorpus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* TrainingCorpus.swift */; };
+		A10000000000000000000010 /* TranscriptPolisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* TranscriptPolisher.swift */; };
+		CD0000000000000000000001 /* AppEdition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0000000000000000000001 /* AppEdition.swift */; };
+		CD0000000000000000000002 /* WordFixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0000000000000000000002 /* WordFixes.swift */; };
+		CD0000000000000000000003 /* WordFixStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0000000000000000000003 /* WordFixStore.swift */; };
+		CD0000000000000000000005 /* CorpusRetention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0000000000000000000005 /* CorpusRetention.swift */; };
+		CD0000000000000000000006 /* CorpusVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0000000000000000000006 /* CorpusVocabulary.swift */; };
+		CD0000000000000000000007 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0000000000000000000007 /* SettingsView.swift */; };
+		D10000000000000000000001 /* ReadbackAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000001 /* ReadbackAnalysis.swift */; };
+		D10000000000000000000002 /* ReadbackProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000002 /* ReadbackProbe.swift */; };
+		D10000000000000000000003 /* ReadbackResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000003 /* ReadbackResultsView.swift */; };
+		D10000000000000000000004 /* WordFixSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000004 /* WordFixSuggestions.swift */; };
+		D10000000000000000000005 /* WordFixesEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000005 /* WordFixesEditor.swift */; };
+		D10000000000000000000006 /* ChromiumAppDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000006 /* ChromiumAppDetection.swift */; };
+		D10000000000000000000007 /* WordFixMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000007 /* WordFixMining.swift */; };
+		D10000000000000000000008 /* WordFixCandidates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000008 /* WordFixCandidates.swift */; };
+		D10000000000000000000009 /* SetupWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000009 /* SetupWindow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+		AC0000000000000000000001 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = AD0000000000000000000001 /* AppIcon.icns */; };
+		AC0000000000000000000002 /* caw-orb.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0000000000000000000002 /* caw-orb.png */; };
+		AC0000000000000000000003 /* caw-bird.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0000000000000000000003 /* caw-bird.png */; };
+		AC0000000000000000000004 /* caw-chick.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0000000000000000000004 /* caw-chick.png */; };
+		AC0000000000000000000005 /* caw-raven.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0000000000000000000005 /* caw-raven.png */; };
+		A10000000000000000000017 /* CawVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001B /* CawVoice.swift */; };
+		A10000000000000000000019 /* ModernSpeechEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001D /* ModernSpeechEngine.swift */; };
+		A10000000000000000000018 /* RoostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001C /* RoostController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+        CC0000000000000000000004 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Companion/CrumbChat.swift; sourceTree = SOURCE_ROOT; };
+        CC0000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = folder; path = VoiceApp/Resources/Crumb; sourceTree = SOURCE_ROOT; };
+		AD0000000000000000000001 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = VoiceApp/Resources/AppIcon.icns; sourceTree = SOURCE_ROOT; };
+		AD0000000000000000000002 /* caw-orb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceApp/Resources/caw-orb.png"; sourceTree = SOURCE_ROOT; };
+		AD0000000000000000000003 /* caw-bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceApp/Resources/caw-bird.png"; sourceTree = SOURCE_ROOT; };
+		AD0000000000000000000004 /* caw-chick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceApp/Resources/caw-chick.png"; sourceTree = SOURCE_ROOT; };
+		AD0000000000000000000005 /* caw-raven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceApp/Resources/caw-raven.png"; sourceTree = SOURCE_ROOT; };
+		A2000000000000000000001B /* CawVoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Companion/CawVoice.swift; sourceTree = SOURCE_ROOT; };
+		A2000000000000000000001D /* ModernSpeechEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSpeechEngine.swift; sourceTree = "<group>"; };
+		A2000000000000000000001C /* RoostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Companion/RoostController.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000001 /* VoiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* FnKeyMonitoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FnKeyMonitoring.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* FnKeyEventTapMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FnKeyEventTapMonitor.swift; sourceTree = "<group>"; };
+		A20000000000000000000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000008 /* VoiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000009 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A2000000000000000000000A /* THIRD_PARTY_LICENSES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = THIRD_PARTY_LICENSES.md; sourceTree = "<group>"; };
+		A2000000000000000000000B /* TranscriptDisfluencyCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptDisfluencyCleaner.swift; sourceTree = "<group>"; };
+		A2000000000000000000000D /* LiveTranscriptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTranscriptionController.swift; sourceTree = "<group>"; };
+		A2000000000000000000000E /* FloatingPillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPillController.swift; sourceTree = "<group>"; };
+		A2000000000000000000000F /* TextInsertionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInsertionController.swift; sourceTree = "<group>"; };
+		A20000000000000000000010 /* MicrophoneCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneCapture.swift; sourceTree = "<group>"; };
+		A20000000000000000000011 /* InsertionAuditLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionAuditLog.swift; sourceTree = "<group>"; };
+		A20000000000000000000012 /* InsertionDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionDestinations.swift; sourceTree = "<group>"; };
+		A20000000000000000000013 /* TrainingCorpus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCorpus.swift; sourceTree = "<group>"; };
+		A20000000000000000000014 /* TranscriptPolisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptPolisher.swift; sourceTree = "<group>"; };
+		CE0000000000000000000001 /* AppEdition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/App/AppEdition.swift; sourceTree = SOURCE_ROOT; };
+		CE0000000000000000000002 /* WordFixes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/WordFixes.swift; sourceTree = SOURCE_ROOT; };
+		CE0000000000000000000003 /* WordFixStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/WordFixStore.swift; sourceTree = SOURCE_ROOT; };
+		CE0000000000000000000005 /* CorpusRetention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/CorpusRetention.swift; sourceTree = SOURCE_ROOT; };
+		CE0000000000000000000006 /* CorpusVocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/CorpusVocabulary.swift; sourceTree = SOURCE_ROOT; };
+		CE0000000000000000000007 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/App/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		D20000000000000000000001 /* ReadbackAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/ReadbackAnalysis.swift; sourceTree = SOURCE_ROOT; };
+		D20000000000000000000002 /* ReadbackProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/ReadbackProbe.swift; sourceTree = SOURCE_ROOT; };
+		D20000000000000000000003 /* ReadbackResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/App/ReadbackResultsView.swift; sourceTree = SOURCE_ROOT; };
+		D20000000000000000000004 /* WordFixSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/WordFixSuggestions.swift; sourceTree = SOURCE_ROOT; };
+		D20000000000000000000005 /* WordFixesEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/App/WordFixesEditor.swift; sourceTree = SOURCE_ROOT; };
+		D20000000000000000000006 /* ChromiumAppDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/ChromiumAppDetection.swift; sourceTree = SOURCE_ROOT; };
+		D20000000000000000000007 /* WordFixMining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/WordFixMining.swift; sourceTree = SOURCE_ROOT; };
+		D20000000000000000000008 /* WordFixCandidates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/Transcription/WordFixCandidates.swift; sourceTree = SOURCE_ROOT; };
+		D20000000000000000000009 /* SetupWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceApp/App/SetupWindow.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A40000000000000000000002 /* VoiceApp */,
+				A20000000000000000000009 /* README.md */,
+				A2000000000000000000000A /* THIRD_PARTY_LICENSES.md */,
+				A40000000000000000000006 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* VoiceApp */ = {
+			isa = PBXGroup;
+			children = (
+				A40000000000000000000003 /* App */,
+				A40000000000000000000004 /* Hotkey */,
+				A40000000000000000000005 /* Overlay */,
+				A40000000000000000000008 /* Transcription */,
+				A40000000000000000000007 /* Resources */,
+				A2000000000000000000001B /* CawVoice.swift */,
+				A2000000000000000000001C /* RoostController.swift */,
+				CE0000000000000000000001 /* AppEdition.swift */,
+				CE0000000000000000000002 /* WordFixes.swift */,
+				CE0000000000000000000003 /* WordFixStore.swift */,
+				CE0000000000000000000005 /* CorpusRetention.swift */,
+				CE0000000000000000000006 /* CorpusVocabulary.swift */,
+				CE0000000000000000000007 /* SettingsView.swift */,
+				D20000000000000000000001 /* ReadbackAnalysis.swift */,
+				D20000000000000000000002 /* ReadbackProbe.swift */,
+				D20000000000000000000003 /* ReadbackResultsView.swift */,
+				D20000000000000000000004 /* WordFixSuggestions.swift */,
+				D20000000000000000000005 /* WordFixesEditor.swift */,
+				D20000000000000000000008 /* WordFixCandidates.swift */,
+				D20000000000000000000009 /* SetupWindow.swift */,
+				D20000000000000000000007 /* WordFixMining.swift */,
+				D20000000000000000000006 /* ChromiumAppDetection.swift */,
+			);
+			path = VoiceApp;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* VoiceApp.swift */,
+				A20000000000000000000002 /* AppDelegate.swift */,
+				A20000000000000000000003 /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000004 /* Hotkey */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000004 /* FnKeyMonitoring.swift */,
+				A20000000000000000000005 /* FnKeyEventTapMonitor.swift */,
+			);
+			path = Hotkey;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000005 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000000E /* FloatingPillController.swift */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000008 /* VoiceApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000007 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000007 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000008 /* Transcription */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000000B /* TranscriptDisfluencyCleaner.swift */,
+				A2000000000000000000001D /* ModernSpeechEngine.swift */,
+				A2000000000000000000000D /* LiveTranscriptionController.swift */,
+				A2000000000000000000000F /* TextInsertionController.swift */,
+				A20000000000000000000010 /* MicrophoneCapture.swift */,
+				A20000000000000000000011 /* InsertionAuditLog.swift */,
+				A20000000000000000000012 /* InsertionDestinations.swift */,
+				A20000000000000000000013 /* TrainingCorpus.swift */,
+				A20000000000000000000014 /* TranscriptPolisher.swift */,
+			);
+			path = Transcription;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* VoiceApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000000000000000000002 /* Build configuration list for PBXNativeTarget "VoiceApp" */;
+			buildPhases = (
+				A60000000000000000000001 /* Sources */,
+				A30000000000000000000001 /* Frameworks */,
+				A60000000000000000000002 /* Resources */,
+				AB0000000000000000000001 /* Verify Capabilities */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = VoiceApp;
+			productName = VoiceApp;
+			productReference = A20000000000000000000008 /* VoiceApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A50000000000000000000001 = { CreatedOnToolsVersion = 16.0; };
+				};
+			};
+			buildConfigurationList = A80000000000000000000001 /* Build configuration list for PBXProject "VoiceApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = A40000000000000000000001;
+			productRefGroup = A40000000000000000000006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A50000000000000000000001 /* VoiceApp */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60000000000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC0000000000000000000001 /* AppIcon.icns in Resources */,
+                CC0000000000000000000001,
+				AC0000000000000000000002 /* caw-orb.png in Resources */,
+				AC0000000000000000000003 /* caw-bird.png in Resources */,
+				AC0000000000000000000004 /* caw-chick.png in Resources */,
+				AC0000000000000000000005 /* caw-raven.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB0000000000000000000001 /* Verify Capabilities */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Verify Capabilities";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\"$SRCROOT/Scripts/verify-capabilities.sh\" || exit 1\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* VoiceApp.swift in Sources */,
+                CC0000000000000000000003,
+				A10000000000000000000002 /* AppDelegate.swift in Sources */,
+				A10000000000000000000003 /* AppState.swift in Sources */,
+				A10000000000000000000004 /* FnKeyMonitoring.swift in Sources */,
+				A10000000000000000000005 /* FnKeyEventTapMonitor.swift in Sources */,
+				A10000000000000000000007 /* TranscriptDisfluencyCleaner.swift in Sources */,
+				A10000000000000000000009 /* LiveTranscriptionController.swift in Sources */,
+				A1000000000000000000000A /* FloatingPillController.swift in Sources */,
+				A1000000000000000000000B /* TextInsertionController.swift in Sources */,
+				A1000000000000000000000C /* MicrophoneCapture.swift in Sources */,
+				A1000000000000000000000D /* InsertionAuditLog.swift in Sources */,
+				A1000000000000000000000E /* InsertionDestinations.swift in Sources */,
+				A1000000000000000000000F /* TrainingCorpus.swift in Sources */,
+				A10000000000000000000010 /* TranscriptPolisher.swift in Sources */,
+				A10000000000000000000017 /* CawVoice.swift in Sources */,
+				A10000000000000000000019 /* ModernSpeechEngine.swift in Sources */,
+				A10000000000000000000018 /* RoostController.swift in Sources */,
+				D10000000000000000000005 /* WordFixesEditor.swift in Sources */,
+				D10000000000000000000008 /* WordFixCandidates.swift in Sources */,
+				D10000000000000000000009 /* SetupWindow.swift in Sources */,
+				D10000000000000000000007 /* WordFixMining.swift in Sources */,
+				D10000000000000000000006 /* ChromiumAppDetection.swift in Sources */,
+				D10000000000000000000004 /* WordFixSuggestions.swift in Sources */,
+				D10000000000000000000003 /* ReadbackResultsView.swift in Sources */,
+				D10000000000000000000002 /* ReadbackProbe.swift in Sources */,
+				D10000000000000000000001 /* ReadbackAnalysis.swift in Sources */,
+				CD0000000000000000000006 /* CorpusVocabulary.swift in Sources */,
+				CD0000000000000000000005 /* CorpusRetention.swift in Sources */,
+				CD0000000000000000000003 /* WordFixStore.swift in Sources */,
+				CD0000000000000000000002 /* WordFixes.swift in Sources */,
+				CD0000000000000000000001 /* AppEdition.swift in Sources */,
+				CD0000000000000000000007 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A90000000000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; }; name = Debug; };
+		A90000000000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; }; name = Release; };
+		A90000000000000000000005 /* Debug-Beta */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; }; name = "Debug-Beta"; };
+		A90000000000000000000006 /* Release-Beta */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; }; name = "Release-Beta"; };
+		A90000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_DISPLAY_NAME = "$(PRODUCT_NAME)";
+				CAW_EDITION = personal;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoiceApp/Resources/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.VoiceApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A90000000000000000000007 /* Debug-Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_DISPLAY_NAME = "Caw Beta";
+				CAW_EDITION = beta;
+				PRODUCT_MODULE_NAME = VoiceApp;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) BETA";
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoiceApp/Resources/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.birdbrainlabs.dictation.beta;
+				PRODUCT_NAME = "$(APP_DISPLAY_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Debug-Beta";
+		};
+		A90000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_DISPLAY_NAME = "$(PRODUCT_NAME)";
+				CAW_EDITION = personal;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoiceApp/Resources/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.VoiceApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A90000000000000000000008 /* Release-Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_DISPLAY_NAME = "Caw Beta";
+				CAW_EDITION = beta;
+				PRODUCT_MODULE_NAME = VoiceApp;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) BETA";
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoiceApp/Resources/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.birdbrainlabs.dictation.beta;
+				PRODUCT_NAME = "$(APP_DISPLAY_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Release-Beta";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A80000000000000000000001 /* Build configuration list for PBXProject "VoiceApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (A90000000000000000000001 /* Debug */, A90000000000000000000002 /* Release */, A90000000000000000000005 /* Debug-Beta */, A90000000000000000000006 /* Release-Beta */);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000000000000000000002 /* Build configuration list for PBXNativeTarget "VoiceApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (A90000000000000000000003 /* Debug */, A90000000000000000000004 /* Release */, A90000000000000000000007 /* Debug-Beta */, A90000000000000000000008 /* Release-Beta */);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A70000000000000000000001 /* Project object */;
+}

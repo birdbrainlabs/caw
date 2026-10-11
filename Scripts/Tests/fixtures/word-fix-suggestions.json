@@ -1,0 +1,31 @@
+{
+  "about" : "Test fixture: three made-up suggestions. Not real data.",
+  "suggestions" : [
+    {
+      "count" : 4,
+      "created" : "2026-09-25T12:00:00Z",
+      "example" : "the pixel art looks grate today",
+      "heard" : "grate",
+      "id" : "fixture-approve",
+      "shouldBe" : "great",
+      "status" : "pending"
+    },
+    {
+      "count" : 2,
+      "created" : "2026-09-25T12:00:00Z",
+      "example" : "ask fable about it",
+      "heard" : "fable",
+      "id" : "fixture-reject",
+      "shouldBe" : "Fable",
+      "status" : "pending"
+    },
+    {
+      "created" : "2026-09-24T12:00:00Z",
+      "heard" : "roost",
+      "id" : "fixture-old-rejected",
+      "shouldBe" : "rust",
+      "status" : "rejected"
+    }
+  ],
+  "version" : 1
+}

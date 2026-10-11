@@ -1,0 +1,9 @@
+{
+  "about": "Word fixes: test fixture with made-up entries. Not real data.",
+  "version": 1,
+  "fixes": [
+    { "from": "clawed", "to": "Claude", "capitalization": "always" },
+    { "from": "palate", "to": "palette", "capitalization": "matchHeard" },
+    { "from": "bird brain", "to": "Birdbrain", "capitalization": "always" }
+  ]
+}
