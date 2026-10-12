@@ -48,7 +48,12 @@ import SwiftUI
             window.delegate = self
             window.contentView = NSHostingView(rootView: SetupView(model: model, finish: { [weak self] in self?.finish() }))
             window.center()
+            // Stays above System Settings, so it isn't lost behind it while the
+            // tester switches permissions on.
+            window.level = .floating
             self.window = window
+            model.onSettingsOpened = { [weak self] in self?.moveAside() }
+            model.onNewlyGranted = { [weak self] in self?.bringBack() }
         }
         model.start()
         NSApp.activate(ignoringOtherApps: true)
@@ -57,6 +62,20 @@ import SwiftUI
 
     func receiveDictation(_ text: String) {
         model.receiveDictation(text)
+    }
+
+    /// To the left edge of the screen, so the floating window doesn't cover
+    /// the switches in System Settings.
+    private func moveAside() {
+        guard let window, let screen = window.screen ?? NSScreen.main else { return }
+        window.setFrameOrigin(NSPoint(x: screen.visibleFrame.minX + 20, y: window.frame.minY))
+    }
+
+    /// A permission was just allowed (often in System Settings): back to the
+    /// front, with the next one waiting.
+    private func bringBack() {
+        NSApp.activate(ignoringOtherApps: true)
+        window?.makeKeyAndOrderFront(nil)
     }
 
     private func finish() {
@@ -134,6 +153,14 @@ enum GlobeKeySetting: Equatable {
     @Published var learnFromFixes = true
 
     private var timer: Timer?
+    /// Set by SetupWindow: System Settings is opening / a permission turned on.
+    var onSettingsOpened: (() -> Void)?
+    var onNewlyGranted: (() -> Void)?
+
+    /// The first permission not yet allowed; its button is the prominent one.
+    var nextPermission: Permission? {
+        [Permission.microphone, .speech, .inputMonitoring, .accessibility].first { !granted.contains($0) }
+    }
 
     func start() {
         step = .welcome
@@ -159,7 +186,11 @@ enum GlobeKeySetting: Equatable {
         if SFSpeechRecognizer.authorizationStatus() == .authorized { now.insert(.speech) }
         if CGPreflightListenEventAccess() { now.insert(.inputMonitoring) }
         if TextInsertionController.shared.canInsertIntoApps { now.insert(.accessibility) }
-        if now != granted { granted = now }
+        if now != granted {
+            let gained = !now.subtracting(granted).isEmpty
+            granted = now
+            if gained, timer != nil { onNewlyGranted?() }
+        }
 
         // Input Monitoring ticked straight in System Settings, without the
         // button: start listening for Fn now rather than at the next launch.
@@ -192,6 +223,8 @@ enum GlobeKeySetting: Equatable {
                 openPrivacyPane("Privacy_SpeechRecognition")
             }
         case .inputMonitoring:
+            // Both end in System Settings, whether via macOS's prompt or directly.
+            onSettingsOpened?()
             if asked.contains(.inputMonitoring) {
                 openPrivacyPane("Privacy_ListenEvent")
             } else {
@@ -199,6 +232,8 @@ enum GlobeKeySetting: Equatable {
                 AppState.shared.requestPermissionAndRetry()
             }
         case .accessibility:
+            // Both end in System Settings, whether via macOS's prompt or directly.
+            onSettingsOpened?()
             if asked.contains(.accessibility) {
                 openPrivacyPane("Privacy_Accessibility")
             } else {
@@ -334,24 +369,28 @@ struct SetupView: View {
                     why: "Listen while you dictate.",
                     isGranted: model.granted.contains(.microphone),
                     buttonTitle: "Allow",
+                    isNext: model.nextPermission == .microphone,
                     action: { model.request(.microphone) })
                 PermissionRow(
                     title: "Speech Recognition",
                     why: "Turn your voice into text.",
                     isGranted: model.granted.contains(.speech),
                     buttonTitle: "Allow",
+                    isNext: model.nextPermission == .speech,
                     action: { model.request(.speech) })
                 PermissionRow(
                     title: "Input Monitoring",
                     why: "Notice when Fn is pressed and released—nothing else.",
                     isGranted: model.granted.contains(.inputMonitoring),
                     buttonTitle: model.asked.contains(.inputMonitoring) ? "Open Settings" : "Allow",
+                    isNext: model.nextPermission == .inputMonitoring,
                     action: { model.request(.inputMonitoring) })
                 PermissionRow(
                     title: "Accessibility",
                     why: "Put the finished text at your cursor.",
                     isGranted: model.granted.contains(.accessibility),
                     buttonTitle: model.asked.contains(.accessibility) ? "Open Settings" : "Allow",
+                    isNext: model.nextPermission == .accessibility,
                     action: { model.request(.accessibility) })
             }
 
@@ -478,6 +517,7 @@ private struct PermissionRow: View {
     let why: String
     let isGranted: Bool
     let buttonTitle: String
+    var isNext = false
     let action: () -> Void
 
     var body: some View {
@@ -495,6 +535,8 @@ private struct PermissionRow: View {
             Spacer()
             if isGranted {
                 Text("Allowed").foregroundStyle(.secondary)
+            } else if isNext {
+                Button(buttonTitle, action: action).buttonStyle(.borderedProminent)
             } else {
                 Button(buttonTitle, action: action)
             }
