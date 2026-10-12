@@ -30,6 +30,22 @@ it.
   reaches for anything beyond this (network, screen capture, keystroke reading,
   writing into other apps outside one file).
 
+## Install
+
+You don't have to build Caw to use it.
+
+1. Download `Caw-Beta-<version>.dmg` from the
+   [latest release](https://github.com/birdbrainlabs/caw/releases/latest).
+2. Open it and drag **Caw Beta** onto Applications.
+3. Open Caw Beta from Applications. It is signed with a Developer ID and
+   notarized by Apple, so macOS only asks once whether to open an app from the
+   internet.
+4. Grant **Microphone**, **Speech Recognition** and **Accessibility** when it
+   asks (and Input Monitoring if it asks, for the Fn key), then hold Fn/Globe
+   and talk.
+
+It runs on Apple silicon and Intel Macs with macOS 14 or later.
+
 ## Requirements
 
 - macOS 26 for the new speech engine. On older macOS (14 or later) Caw falls
@@ -51,6 +67,10 @@ it.
 The project builds with an ad-hoc signature so anyone can build it. macOS may
 ask for permissions again after you rebuild; to avoid that, set your own team
 under Signing & Capabilities.
+
+`Scripts/release-mac.sh` builds the signed, notarized download. It needs a
+Developer ID certificate and Apple notarization credentials, so it only works
+for the maintainer.
 
 Tests: `Scripts/run-tests.sh` compiles and runs the standalone tests in
 `Scripts/Tests`.
