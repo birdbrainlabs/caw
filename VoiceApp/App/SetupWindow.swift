@@ -4,7 +4,8 @@ import Speech
 import SwiftUI
 
 /// First-run setup for the Beta edition (Phase 2c). Opens by itself on a
-/// tester's first launch and again from Settings › Permissions. The Personal
+/// tester's first launch, at launch when a permission it needs has gone
+/// missing (showIfNeeded), and from Settings › Permissions. The Personal
 /// edition never opens it: its owner granted everything long ago.
 ///
 /// Six pages: welcome, the four permissions, the Globe key, a practice
@@ -26,8 +27,15 @@ import SwiftUI
     /// instead of being pasted into whatever app was in front before it.
     var isKey: Bool { window?.isKeyWindow == true && NSApp.isActive }
 
+    /// Opens on the first launch, and again whenever the microphone or Input
+    /// Monitoring is missing: macOS ties permissions to the app's signature, so
+    /// an update signed differently (or a reset) takes them away, and without
+    /// Input Monitoring holding Fn does nothing and says nothing.
     static func showIfNeeded() {
-        guard AppEdition.isBeta, !UserDefaults.standard.bool(forKey: completedKey) else { return }
+        guard AppEdition.isBeta else { return }
+        let missingPermission = AVCaptureDevice.authorizationStatus(for: .audio) != .authorized
+            || !CGPreflightListenEventAccess()
+        guard !UserDefaults.standard.bool(forKey: completedKey) || missingPermission else { return }
         shared.show()
     }
 
