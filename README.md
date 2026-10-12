@@ -4,10 +4,10 @@ Caw is hold-to-talk dictation for macOS. Hold the Fn/Globe key (or click the
 small floating pill), speak, let go, and the text appears where your cursor is.
 You read it and press Return yourself; Caw never sends anything for you.
 
-Caw was built by someone whose speech standard dictation follows poorly: an accent,
-a mumble, pauses and restarts. It’s for anyone that describes, including people
-who stutter. Pauses, restarts and repeated sounds are expected,
-not treated as mistakes.
+Caw was made by someone whose speech standard dictation doesn’t follow well: an
+accent, a mumble, a lot of stopping and starting. It’s for anyone whose speech
+gets lost the same way, including people who stutter. Pauses, restarts and
+repeated sounds are expected, not treated as mistakes.
 
 The Xcode project and product are still called `VoiceApp`.
 
